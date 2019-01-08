@@ -44,13 +44,14 @@ function increaseAge()
 function createPerson()
 {
 	
-	var newPerson = {
+	person = {
 		name : document.getElementById("name").value,
 		age : document.getElementById("age").value,
 		occupation : document.getElementById("occ").value
 	}
 
-	console.log(newPerson);
+	console.log(person);
+	checkAge(person);
 }
 
 var sentence = "He said \"My name is Elliot\"";
@@ -61,3 +62,20 @@ var words = "Numbers = " + 4 + ", " + 5;
 
 console.log(words);
 
+var strArray = ["Hi", "Hello", "Hey"];
+console.log(strArray);
+
+strArray.push("Bye");
+console.log(strArray);
+strArray.pop();
+console.log(strArray);
+
+function checkAge(person)
+{
+	if((person.age <= 20 )&& (person.age >= 40)){
+		console.log("True");
+	} else{
+		console.log("False");
+	}
+
+}
