@@ -1,8 +1,9 @@
-@CHARSET "ISO-8859-1";
 
-html {background-color: #3F9AA5;}
+html {background-color: #E4E5E6; font-family: Arial}
 
-body {background-color: #03585D;  width: 90%;  margin-left: auto;  margin-right: auto; }
+body {background-color: #99CCCC;  width: 90%;  margin-left: auto;  margin-right: auto; }
 
-h1 { color: #FA7268 }
+h1 {color: #016699}
+
+#navigation {background-color: #004466 }
 
