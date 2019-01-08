@@ -3,7 +3,35 @@ html {background-color: #E4E5E6; font-family: Arial}
 
 body {background-color: #99CCCC;  width: 90%;  margin-left: auto;  margin-right: auto; }
 
-h1 {color: #016699}
+h1 {color: #016699; padding: 5px}
 
-#navigation {background-color: #004466 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #004466;
+}
 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #99CCCC;
+  color: #016699
+}
+
+.active {
+   background-color: #99CCCC;
+  color: #016699
+}
