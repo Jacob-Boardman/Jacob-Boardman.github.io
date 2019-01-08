@@ -3,3 +3,12 @@
 html {background-color: #999999;}
 
 body {background-color: #FFFFFF;  width: 80%;  margin-left: auto;  margin-right: auto;}
+
+.navigation {  background-color: #00004d;  color: #FFFFFF;}
+.navigation a:link {  color: #ffffff;}
+.navigation a:visited {  color: #ffff00;}
+
+
+.navigation li {  display: table-cell;  text-align: center;  vertical-align: middle;  float: left;  width: 25%;}
+.navigation li:hover {   background-color: #3333ff; }
+.navigation a:link {  color: #ffffff;   text-decoration: none;}
