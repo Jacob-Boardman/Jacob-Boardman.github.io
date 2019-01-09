@@ -159,7 +159,26 @@ request.onload = function () {
 
 function showSupers() {
 	let myPara = document.createElement("pre");
-	myPara.textContent = JSON.stringify(superHeroes);
+	myPara.textContent = JSON.stringify(superHeroes, myPara.textContent, 2);
 	
 	document.getElementById("content").appendChild(myPara);
+}
+
+let requestURL2 = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json';
+let request2 = new XMLHttpRequest();
+request2.open("GET", requestURL2);
+request2.responseType = "json"
+request2.send();
+
+let kings;
+
+request.onload = function() {
+	kings = request2.response;
+	console.log(kings);
+}
+
+function findKing() {
+	console.log(kings);
+	let searchedKing = document.getElementById("findKing").value;
+	console.log(searchedKing);
 }
