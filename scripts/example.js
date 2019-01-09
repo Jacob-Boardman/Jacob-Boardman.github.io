@@ -66,7 +66,7 @@ strArray.pop();
 console.log(strArray);
 
 function checkAge(passedAge) {
-    if ((passedAge <= 20) && (passedAge >= 40)) {
+    if ((passedAge >= 20) && (passedAge <= 40)) {
 	    console.log("True");
     } else {
 	    console.log("False");
