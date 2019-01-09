@@ -131,9 +131,35 @@ function strings4(str1 = document.getElementById("str1").value) {
 }
 
 function dom1(){
-	var para = document.createElement("p");
-	var node = document.createTextNode("This is a new paragraph.");
+	let para = document.createElement("p");
+	let node = document.createTextNode(document.getElementById("para1").value);
 	para.appendChild(node);
-	var element = document.getElementById("content");
+	let element = document.getElementById("paras");
 	element.appendChild(para);
+}
+function updateDom() {
+	let paraNum = parseInt(document.getElementById("paraNum").value);
+	let paras = document.getElementById("paras"); 
+	let para = paras.getElementsByTagName("p")[paraNum];
+	para.textContent = document.getElementById("para1").value;
+	console.log(para.textContent);
+}
+
+let requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+let request = new XMLHttpRequest();
+request.open("GET", requestURL);
+request.responseType = "json"
+request.send();
+let superHeroes;
+
+request.onload = function () {
+	superHeroes = request.response;
+
+}
+
+function showSupers() {
+	let myPara = document.createElement("pre");
+	myPara.textContent = JSON.stringify(superHeroes);
+	
+	document.getElementById("content").appendChild(myPara);
 }
