@@ -100,6 +100,18 @@ function iteration3(arg1 = parseInt(document.getElementById("number").value), st
 	}
 }
 
-function iteration4() {
-	console.log("Test");
+function iteration4(arg1 = parseInt(document.getElementById("number2").value)) {
+	while (arg1 !== 1) {
+		if (arg1 % 3 === 0){
+			arg1 /= 3;
+			console.log("Number divided by 3 ");
+		} else if((arg1-1) % 3 === 0) {
+			arg1 -= 1;
+			console.log("Number minus 1");
+		} else if ((arg1 + 1) % 3 === 0) {
+			arg1 += 1;
+			console.log("Number plus 1");
+		}		
+	}
+	console.log("Number is now 1");
 }
