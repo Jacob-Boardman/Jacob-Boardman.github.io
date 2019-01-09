@@ -1,11 +1,14 @@
+/*jslint white: true, browser: true, devel: true, windows: true, forin: true, vars: true, nomen: true, plusplus: true, bitwise: true, regexp: true, sloppy: true, indent: 4, maxerr: 50 */
+
 'use strict';
+
 //var number = 6;
 //document.write(number);
 //window.alert(number);
 //console.log(number);
 
 function square(arg1) {
-	return arg1 * arg1;
+    return arg1 * arg1;
 }
 
 console.log(square(6));
@@ -17,10 +20,10 @@ function sum (arg1, arg2, arg3) {
 console.log(sum(1, 2, 10));
 
 var person = {
-	name: "Mario",
-	age: 25,
-	occupation: "Plumber"
-}
+    name: "Mario",
+    age: 25,
+    occupation: "Plumber"
+};
 
 console.log(person);
 
@@ -70,6 +73,14 @@ function checkAge(passedAge) {
 	    console.log("True");
     } else {
 	    console.log("False");
-    }
+	}
 
+};
+
+function iteration() {
+	for (let i = 1; i <= 10; i++) {
+		if(i%2 == 0) {
+			console.log(i);
+		}
+	}
 }
