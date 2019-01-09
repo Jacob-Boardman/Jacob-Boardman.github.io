@@ -169,10 +169,8 @@ let request2 = new XMLHttpRequest();
 request2.open("GET", requestURL2);
 request2.responseType = "json"
 request2.send();
-
 let kings;
-
-request.onload = function() {
+request2.onload = function() {
 	kings = request2.response;
 	console.log(kings);
 }
@@ -181,4 +179,12 @@ function findKing() {
 	console.log(kings);
 	let searchedKing = document.getElementById("findKing").value;
 	console.log(searchedKing);
+	let filteredKings = kings.filter(k => k.nm === searchedKing);
+	console.log(filteredKings);
+	let para = document.createElement("pre");
+	let node = document.createTextNode(filteredKings[0]["nm"] +"\n" + filteredKings.cty + "\n" + filteredKings.hse + "\n" + filteredKings.yrs + "\n");
+	//let node = document.createTextNode(JSON.stringify(filteredKings, undefined, 2));
+	para.appendChild(node);
+	let element = document.getElementById("content");
+	element.appendChild(para);
 }
