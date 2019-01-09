@@ -129,3 +129,11 @@ function strings4(str1 = document.getElementById("str1").value) {
 	}
 	console.log("There are " + counter + " triples in " + str1)
 }
+
+function dom1(){
+	var para = document.createElement("p");
+	var node = document.createTextNode("This is a new paragraph.");
+	para.appendChild(node);
+	var element = document.getElementById("content");
+	element.appendChild(para);
+}
