@@ -46,7 +46,7 @@ function createPerson() {
 	    name: document.getElementById("name").value,
 	    age: parseInt(document.getElementById("age").value),
 	    occupation: document.getElementById("occ").value
-    }
+    };
 
     console.log(person);
     checkAge(person.age);
@@ -75,7 +75,7 @@ function checkAge(passedAge) {
 	    console.log("False");
 	}
 
-};
+}
 
 function iteration() {
 	for (let i = 1; i <= 10; i++) {
@@ -83,4 +83,23 @@ function iteration() {
 			console.log(i);
 		}
 	}
+}
+
+function iteration3(arg1 = parseInt(document.getElementById("number").value), str1 = document.getElementById("word1").value, str2 = document.getElementById("word2").value) {
+	for(let i = 1; i<=arg1; i++) {
+		if(i%3 === 0 && i%5 === 0) {
+			console.log(str1 + str2);
+		} else if(i%5 === 0) {
+			console.log(str2);
+		} else if (i%3 === 0) {
+			console.log(str1);
+		}
+		else {
+			console.log(i);
+		}
+	}
+}
+
+function iteration4() {
+	console.log("Test");
 }
