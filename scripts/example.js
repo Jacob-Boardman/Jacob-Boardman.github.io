@@ -1,3 +1,4 @@
+'use strict';
 //var number = 6;
 //document.write(number);
 //window.alert(number);
@@ -10,9 +11,9 @@ function square(arg1)
 
 console.log(square(6));
 
-function sum ( arg1, arg2, arg3)
+function sum (arg1, arg2, arg3)
 {
-	return arg1+arg2+arg3;
+    return arg1 + arg2 + arg3;
 }
 
 console.log(sum(1,2,10));
@@ -27,7 +28,7 @@ console.log(person);
 
 function editPerson(name, age, occupation)
 {
-	person.name = name;
+    person.name = name;
 	person.age = age;
 	person.occupation = occupation;
 }
@@ -41,12 +42,10 @@ function increaseAge()
 	console.log(person.name + " age is: " + person.age);
 }
 
-function createPerson()
-{
-	
+function createPerson(){	
 	person = {
 		name : document.getElementById("name").value,
-		age : document.getElementById("age").value,
+		age : parseInt(document.getElementById("age").value),
 		occupation : document.getElementById("occ").value
 	}
 
@@ -70,12 +69,11 @@ console.log(strArray);
 strArray.pop();
 console.log(strArray);
 
-function checkAge(person)
-{
-	if((person.age <= 20 )&& (person.age >= 40)){
-		console.log("True");
-	} else{
-		console.log("False");
-	}
+function checkAge(passedPerson) {
+    if ((passedPerson.age <= 20) && (passedPerson.age >= 40)) {
+	    console.log("True");
+    } else{
+	    console.log("False");
+    }
 
 }
