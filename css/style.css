@@ -45,6 +45,10 @@ li:last-child {
   border-right: none;
 }
 
+p {
+  padding: 5px;
+}
+
 .active {
    background-color: #C91A0D;
   color: #016699

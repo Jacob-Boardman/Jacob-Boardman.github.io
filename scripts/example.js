@@ -115,3 +115,17 @@ function iteration4(arg1 = parseInt(document.getElementById("number2").value)) {
 	}
 	console.log("Number is now 1");
 }
+
+function strings4(str1 = document.getElementById("str1").value) {
+	var counter = 0;
+	str1 = str1.toUpperCase();
+	if(str1.length < 3)
+		return counter;
+
+	for(let i = 1; i < str1.length-3; i++ ) {
+		if(str1.charAt(i) === str1.charAt(i-1) && str1.charAt(i) === str1.charAt(i+1)) {
+			counter++;
+		}
+	}
+	console.log("There are " + counter + " triples in " + str1)
+}
