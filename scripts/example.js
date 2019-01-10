@@ -182,7 +182,7 @@ function findKing() {
 	let filteredKings = kings.filter(k => k.nm === searchedKing);
 	console.log(filteredKings);
 	let para = document.createElement("pre");
-	let node = document.createTextNode(filteredKings[0]["nm"] +"\n" + filteredKings.cty + "\n" + filteredKings.hse + "\n" + filteredKings.yrs + "\n");
+	let node = document.createTextNode(filteredKings[0]["nm"] +"\n" + filteredKings[0]["cty"] + "\n" + filteredKings[0]["hse"] + "\n" + filteredKings[0]["yrs"] + "\n");
 	//let node = document.createTextNode(JSON.stringify(filteredKings, undefined, 2));
 	para.appendChild(node);
 	let element = document.getElementById("content");
